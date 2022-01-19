@@ -19,3 +19,10 @@ def decode_word(word)
   end
   array.join
 end
+
+def decode(phr)
+  sentence = phr.split('   ')
+  array = sentence.map { |word| decode_word(word) }
+  array.join(' ')
+end
+print decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...')
